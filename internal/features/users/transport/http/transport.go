@@ -1,15 +1,30 @@
 package users_transport_http
 
-type UsersHTTPHandler struct{
+import (
+	"net/http"
+
+	core_http_server "github.com/g3nd4ch/todo-app/internal/core/transport/http/server"
+)
+
+type UsersHTTPHandler struct {
 	usersService UsersService
 }
 
-type UsersService interface{
-
+type UsersService interface {
 }
 
-func NewUsersHTTPHandler(usersService UsersService) *UsersHTTPHandler{
+func NewUsersHTTPHandler(usersService UsersService) *UsersHTTPHandler {
 	return &UsersHTTPHandler{
 		usersService: usersService,
+	}
+}
+
+func (h *UsersHTTPHandler) Routes() []core_http_server.Route {
+	return []core_http_server.Route{
+		{
+			Method:  http.MethodPost,
+			Path:    "/users",
+			Handler: h.CreateUser,
+		},
 	}
 }
