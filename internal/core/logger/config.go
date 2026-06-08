@@ -14,15 +14,15 @@ type Config struct {
 func NewConfig() (Config, error) {
 	var config Config
 
-	if err := envconfig.Process("LOGGER", &config); err != nil{
+	if err := envconfig.Process("LOGGER", &config); err != nil {
 		return Config{}, fmt.Errorf("proccess envconfig: %w", err)
 	}
 	return config, nil
 }
 
-func NewConfigMust() Config{
+func NewConfigMust() Config {
 	config, err := NewConfig()
-	if err != nil{
+	if err != nil {
 		err = fmt.Errorf("get config logger: %w", err)
 		panic(err)
 	}

@@ -3,7 +3,9 @@ package users_transport_http
 import (
 	"net/http"
 
+	"github.com/g3nd4ch/todo-app/internal/core/domain"
 	core_http_server "github.com/g3nd4ch/todo-app/internal/core/transport/http/server"
+	"golang.org/x/net/context"
 )
 
 type UsersHTTPHandler struct {
@@ -11,6 +13,7 @@ type UsersHTTPHandler struct {
 }
 
 type UsersService interface {
+	CreateUser(ctx context.Context, user domain.User) (domain.User, error)
 }
 
 func NewUsersHTTPHandler(usersService UsersService) *UsersHTTPHandler {

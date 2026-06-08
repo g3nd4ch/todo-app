@@ -79,7 +79,7 @@ func Trace() Middleware {
 			log.Debug(
 				"<<< done HTTP Request",
 				zap.Int("status code", rw.GetStatusCodeOrPanic()),
-				zap.Duration("latency", time.Since(before)), 
+				zap.Duration("latency", time.Since(before)),
 			)
 		})
 	}
