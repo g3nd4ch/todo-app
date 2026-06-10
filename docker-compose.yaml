@@ -9,7 +9,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./out/pgdata:/var/lib/postgresql
+      - ./.out/pgdata:/var/lib/postgresql
     restart: always    
   
   todoapp-postgres-migrate:

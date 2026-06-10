@@ -1,0 +1,7 @@
+2026-06-07T17:24:06.760610	DEBUG	todoapp/main.go:27	starting ToDo app!
+2026-06-07T17:24:06.760820	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-07T17:24:10.976663	DEBUG	middleware/common.go:73	>>> incoming HTTP Request	{"request_id": "c575ecd7-0da0-41fe-9ddb-faf160ae2e10", "url": "/api/v1/users", "time": "2026-06-07T14:24:10.976662"}
+2026-06-07T17:24:10.976756	DEBUG	http/create_user.go:26	invoke createUser handler	{"request_id": "c575ecd7-0da0-41fe-9ddb-faf160ae2e10", "url": "/api/v1/users"}
+2026-06-07T17:24:10.976789	DEBUG	middleware/common.go:79	<<< done HTTP Request	{"request_id": "c575ecd7-0da0-41fe-9ddb-faf160ae2e10", "url": "/api/v1/users", "status code": 200, "latency": "126.567µs"}
+2026-06-07T17:25:25.460170	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-07T17:25:25.460422	WARN	server/server.go:78	HTTP server stopped

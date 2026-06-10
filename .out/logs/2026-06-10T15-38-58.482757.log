@@ -1,0 +1,5 @@
+2026-06-10T18:38:58.483267	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-10T18:38:58.489368	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-10T18:38:58.489470	DEBUG	todoapp/main.go:45	initializing HTTP server
+2026-06-10T18:38:58.489551	WARN	server/server.go:58	start HTTP server	{"addr": ":5050"}
+2026-06-10T18:38:58.497217	ERROR	todoapp/main.go:61	http serve run error	{"error": "Listen and Serve HTTP: listen tcp :5050: bind: address already in use"}

@@ -1,0 +1,10 @@
+2026-06-10T19:02:17.123557	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-10T19:02:17.129431	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-10T19:02:17.129563	DEBUG	todoapp/main.go:45	initializing HTTP server
+2026-06-10T19:02:17.129651	WARN	server/server.go:58	start HTTP server	{"addr": ":5050"}
+2026-06-10T19:02:27.200312	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "da312041-fd41-4635-b93d-d2ccf029a127", "method": "POST", "url": "/api/v1/users", "time": "2026-06-10T16:02:27.200311"}
+2026-06-10T19:02:27.215677	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "da312041-fd41-4635-b93d-d2ccf029a127", "method": "POST", "url": "/api/v1/users", "status code": 201, "latency": "15.363707ms"}
+2026-06-10T19:03:15.964877	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "b7f2ba48-1076-43c3-8a89-ec77d1fe69f6", "method": "POST", "url": "/api/v1/users", "time": "2026-06-10T16:03:15.964876"}
+2026-06-10T19:03:15.967422	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "b7f2ba48-1076-43c3-8a89-ec77d1fe69f6", "method": "POST", "url": "/api/v1/users", "status code": 201, "latency": "2.540112ms"}
+2026-06-10T19:03:24.314699	WARN	server/server.go:71	shutdown HTTP server...
+2026-06-10T19:03:24.315005	WARN	server/server.go:80	HTTP server stopped

@@ -1,0 +1,7 @@
+2026-06-07T17:19:42.370421	DEBUG	todoapp/main.go:27	starting ToDo app!
+2026-06-07T17:19:42.370686	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-07T17:19:48.186935	DEBUG	middleware/common.go:73	>>> incoming HTTP Request	{"request_id": "1f56dff2-64ad-4141-b856-a82d28df55a8", "url": "/api/v1/users", "time": "2026-06-07T14:19:48.186934"}
+2026-06-07T17:19:48.186999	DEBUG	http/create_user.go:26	invoke createUser handler	{"request_id": "1f56dff2-64ad-4141-b856-a82d28df55a8", "url": "/api/v1/users"}
+2026-06-07T17:19:48.187047	ERROR	response/handler.go:27	during handle HTTP request got unexpected panic	{"request_id": "1f56dff2-64ad-4141-b856-a82d28df55a8", "url": "/api/v1/users", "error": "unexpected panic: no status code set"}
+2026-06-07T17:24:04.780655	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-07T17:24:04.780852	WARN	server/server.go:78	HTTP server stopped

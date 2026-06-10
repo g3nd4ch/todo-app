@@ -3,7 +3,6 @@ MAKEFLAGS += --no-print-directory
 include .env
 export
 
-
 export PROJECT_ROOT=${shell pwd}
 
 env-up:
@@ -16,7 +15,7 @@ env-cleanup:
 	@read -p "Очистить все volume файлы окружения? Опасность утери данных! [y/N]: " answer; \
 	if [ "$$answer" = "y" ]; then \
 		docker compose down todoapp-postgres && \
-		rm -rf out/pgdata && \
+		rm -rf .out/pgdata && \
 		echo "Файлы окружения очищены"; \
 	else \
 		echo "Очистка окружения отменена"; \
@@ -53,6 +52,9 @@ migrate-action:
 	"$(action)"
 
 todoapp-run:
-	@export LOGGER_FOLDER=${PROJECT_ROOT}/out/logs && \
+	@export LOGGER_FOLDER=${PROJECT_ROOT}/.out/logs && \
+	export POSTGRES_HOST=127.0.0.1 && \
+	export POSTGRES_PORT=5433 && \
+	export PGPORT=5433 && \
 	go mod tidy && \
 	go run cmd/todoapp/main.go

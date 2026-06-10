@@ -8,8 +8,11 @@ import (
 	"syscall"
 
 	core_logger "github.com/g3nd4ch/todo-app/internal/core/logger"
+	core_postgres_pool "github.com/g3nd4ch/todo-app/internal/core/repository/postgres/pool"
 	core_http_middleware "github.com/g3nd4ch/todo-app/internal/core/transport/http/middleware"
 	core_http_server "github.com/g3nd4ch/todo-app/internal/core/transport/http/server"
+	users_repository_postgres "github.com/g3nd4ch/todo-app/internal/features/users/repository/postgres"
+	users_service "github.com/g3nd4ch/todo-app/internal/features/users/service"
 	users_transport_http "github.com/g3nd4ch/todo-app/internal/features/users/transport/http"
 	"go.uber.org/zap"
 )
@@ -23,12 +26,23 @@ func main() {
 		os.Exit(1)
 	}
 	defer logger.Close()
+	logger.Debug("initializing postgres connection pool")
+	pool, err := core_postgres_pool.NewConnectionPool(
+		ctx,
+		core_postgres_pool.NewConfigMust(),
+	)
+	if err != nil {
+		logger.Fatal("failed to init postgres connection pool", zap.Error(err))
+	}
+	defer pool.Close()
 
-	logger.Debug("starting ToDo app!")
-	usersTransportHTTP := users_transport_http.NewUsersHTTPHandler(nil)
-	usersRoutes := usersTransportHTTP.Routes()
-	apiVersionRouter := core_http_server.NewAPIVersionRouter(core_http_server.ApiVersion1)
-	apiVersionRouter.RegisterRoutes(usersRoutes...)
+	logger.Debug("initializing feature", zap.String("feature", "users"))
+	usersRepository := users_repository_postgres.NewUsersRepository(pool)
+	usersService := users_service.NewUsersService(usersRepository)
+
+	usersTransportHTTP := users_transport_http.NewUsersHTTPHandler(usersService)
+	logger.Debug("initializing HTTP server")
+
 	httpServer := core_http_server.NewHTTPServer(
 		core_http_server.NewConfigMust(),
 		logger,
@@ -37,6 +51,8 @@ func main() {
 		core_http_middleware.Panic(),
 		core_http_middleware.Trace(),
 	)
+	apiVersionRouter := core_http_server.NewAPIVersionRouter(core_http_server.ApiVersion1)
+	apiVersionRouter.RegisterRoutes(usersTransportHTTP.Routes()...)
 
 	httpServer.RegisterApiRoutes(apiVersionRouter)
 
