@@ -33,7 +33,7 @@ func Logger(log *core_logger.Logger) Middleware {
 			requestID := r.Header.Get(requestIDHeader)
 			l := log.With(
 				zap.String("request_id", requestID),
-				zap.String("method", r.Method),
+				zap.String("http method", r.Method),
 				zap.String("url", r.URL.String()),
 			)
 

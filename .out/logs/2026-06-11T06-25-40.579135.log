@@ -1,0 +1,14 @@
+2026-06-11T09:25:40.579235	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-11T09:25:40.597786	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-11T09:25:40.597878	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-11T09:25:40.597981	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-11T09:26:07.748106	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "c670bd49-2596-4a15-9686-fc1aa2525283", "method": "POST", "url": "/api/v1/users", "time": "2026-06-11T06:26:07.748104"}
+2026-06-11T09:26:07.748333	WARN	response/handler.go:55	failed to decode and validate HTTP request	{"request_id": "c670bd49-2596-4a15-9686-fc1aa2525283", "method": "POST", "url": "/api/v1/users", "error": "request validator: Key: 'CreateUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag: invalid argument"}
+2026-06-11T09:26:07.748406	ERROR	response/handler.go:72	failed to decode and validate HTTP request	{"request_id": "c670bd49-2596-4a15-9686-fc1aa2525283", "method": "POST", "url": "/api/v1/users", "error": "request validator: Key: 'CreateUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag: invalid argument"}
+2026-06-11T09:26:07.748505	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "c670bd49-2596-4a15-9686-fc1aa2525283", "method": "POST", "url": "/api/v1/users", "status code": 400, "latency": "399.939µs"}
+2026-06-11T09:27:49.100243	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "63ab7332-8c1a-4ae4-884b-1bdcdaa926dc", "method": "POST", "url": "/api/v1/users", "time": "2026-06-11T06:27:49.100242"}
+2026-06-11T09:27:49.100462	WARN	response/handler.go:55	failed to decode and validate HTTP request	{"request_id": "63ab7332-8c1a-4ae4-884b-1bdcdaa926dc", "method": "POST", "url": "/api/v1/users", "error": "request validator: Key: 'CreateUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'min' tag: invalid argument"}
+2026-06-11T09:27:49.100503	ERROR	response/handler.go:72	failed to decode and validate HTTP request	{"request_id": "63ab7332-8c1a-4ae4-884b-1bdcdaa926dc", "method": "POST", "url": "/api/v1/users", "error": "request validator: Key: 'CreateUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'min' tag: invalid argument"}
+2026-06-11T09:27:49.100591	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "63ab7332-8c1a-4ae4-884b-1bdcdaa926dc", "method": "POST", "url": "/api/v1/users", "status code": 400, "latency": "349.465µs"}
+2026-06-11T11:14:53.251941	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-11T11:14:53.261833	WARN	server/server.go:78	HTTP server stopped

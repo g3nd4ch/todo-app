@@ -1,0 +1,10 @@
+2026-06-11T11:17:52.536527	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-11T11:17:52.551007	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-11T11:17:52.551128	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-11T11:17:52.551229	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-11T11:19:28.721669	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "17bf6fcd-b485-4911-bc75-f0f4e7f4ee93", "method": "GET", "url": "/api/v1/users", "time": "2026-06-11T08:19:28.721658"}
+2026-06-11T11:19:28.743473	ERROR	response/handler.go:72	during handle HTTP request got unexpected panic	{"request_id": "17bf6fcd-b485-4911-bc75-f0f4e7f4ee93", "method": "GET", "url": "/api/v1/users", "error": "unexpected panic: runtime error: index out of range [0] with length 0"}
+2026-06-11T11:20:25.730283	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "8a85bf17-b773-473d-b761-71d0456a3b8e", "method": "GET", "url": "/api/v1/users", "time": "2026-06-11T08:20:25.730281"}
+2026-06-11T11:20:25.731218	ERROR	response/handler.go:72	during handle HTTP request got unexpected panic	{"request_id": "8a85bf17-b773-473d-b761-71d0456a3b8e", "method": "GET", "url": "/api/v1/users", "error": "unexpected panic: runtime error: index out of range [0] with length 0"}
+2026-06-11T11:24:50.087469	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-11T11:24:50.087843	WARN	server/server.go:78	HTTP server stopped
