@@ -1,0 +1,12 @@
+2026-06-11T13:42:57.743371	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-11T13:42:57.756689	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-11T13:42:57.756797	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-11T13:42:57.756938	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-11T13:43:34.553741	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "a56965ad-db80-4a13-8b1b-f992d41151ce", "http method": "GET", "url": "/api/v1/users/100", "time": "2026-06-11T10:43:34.553740"}
+2026-06-11T13:43:34.569671	DEBUG	response/handler.go:55	failed to get user	{"request_id": "a56965ad-db80-4a13-8b1b-f992d41151ce", "http method": "GET", "url": "/api/v1/users/100", "error": "get user from repository: user with id='100':not found"}
+2026-06-11T13:43:34.569782	ERROR	response/handler.go:72	failed to get user	{"request_id": "a56965ad-db80-4a13-8b1b-f992d41151ce", "http method": "GET", "url": "/api/v1/users/100", "error": "get user from repository: user with id='100':not found"}
+2026-06-11T13:43:34.569854	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "a56965ad-db80-4a13-8b1b-f992d41151ce", "http method": "GET", "url": "/api/v1/users/100", "status code": 404, "latency": "16.113362ms"}
+2026-06-11T13:43:51.966664	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "00d1926f-1c23-49df-bde8-4fdf71624487", "http method": "GET", "url": "/api/v1/users/2", "time": "2026-06-11T10:43:51.966663"}
+2026-06-11T13:43:51.970830	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "00d1926f-1c23-49df-bde8-4fdf71624487", "http method": "GET", "url": "/api/v1/users/2", "status code": 200, "latency": "4.165447ms"}
+2026-06-11T14:41:44.705351	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-11T14:41:44.708891	WARN	server/server.go:78	HTTP server stopped

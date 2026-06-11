@@ -32,6 +32,10 @@ func (h *HTTPResponseHandler) JSONResponse(responseBody any, statusCode int) {
 		h.log.Error("write HTTP Response", zap.Error(err))
 	}
 }
+
+func (h *HTTPResponseHandler) NoContentResponse() {
+	h.rw.WriteHeader(http.StatusNoContent)
+}
 func (h *HTTPResponseHandler) ErrorResponse(err error, msg string) {
 	var (
 		statusCode int

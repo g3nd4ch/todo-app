@@ -1,0 +1,18 @@
+2026-06-11T14:44:45.036198	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-11T14:44:45.046949	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-11T14:44:45.047032	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-11T14:44:45.047140	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-11T14:45:45.349988	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "9a144204-02ad-4842-9105-145b5e9618ba", "http method": "GET", "url": "/api/v1/users", "time": "2026-06-11T11:45:45.349986"}
+2026-06-11T14:45:45.362297	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "9a144204-02ad-4842-9105-145b5e9618ba", "http method": "GET", "url": "/api/v1/users", "status code": 200, "latency": "12.308781ms"}
+2026-06-11T14:46:05.551312	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "a82448e6-fb4a-4525-ae36-dea1ba9dae11", "http method": "DELETE", "url": "/api/v1/users/2", "time": "2026-06-11T11:46:05.551311"}
+2026-06-11T14:46:05.564086	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "a82448e6-fb4a-4525-ae36-dea1ba9dae11", "http method": "DELETE", "url": "/api/v1/users/2", "status code": 204, "latency": "12.772362ms"}
+2026-06-11T14:46:30.609269	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "4feb642a-49c5-4e84-98b1-21cdf430543d", "http method": "DELETE", "url": "/api/v1/users/3", "time": "2026-06-11T11:46:30.609268"}
+2026-06-11T14:46:30.612580	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "4feb642a-49c5-4e84-98b1-21cdf430543d", "http method": "DELETE", "url": "/api/v1/users/3", "status code": 204, "latency": "3.306406ms"}
+2026-06-11T14:46:34.919601	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "d92b3fb1-ed30-415c-8129-60243b7f046b", "http method": "GET", "url": "/api/v1/users", "time": "2026-06-11T11:46:34.919600"}
+2026-06-11T14:46:34.920686	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "d92b3fb1-ed30-415c-8129-60243b7f046b", "http method": "GET", "url": "/api/v1/users", "status code": 200, "latency": "1.085001ms"}
+2026-06-11T14:47:24.446090	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "9d9cf98b-2155-446c-9e31-24a53a862cea", "http method": "DELETE", "url": "/api/v1/users/32", "time": "2026-06-11T11:47:24.446089"}
+2026-06-11T14:47:24.446977	DEBUG	response/handler.go:59	failed to delete user	{"request_id": "9d9cf98b-2155-446c-9e31-24a53a862cea", "http method": "DELETE", "url": "/api/v1/users/32", "error": "delete user: user with id='32': not found"}
+2026-06-11T14:47:24.447039	ERROR	response/handler.go:76	failed to delete user	{"request_id": "9d9cf98b-2155-446c-9e31-24a53a862cea", "http method": "DELETE", "url": "/api/v1/users/32", "error": "delete user: user with id='32': not found"}
+2026-06-11T14:47:24.447155	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "9d9cf98b-2155-446c-9e31-24a53a862cea", "http method": "DELETE", "url": "/api/v1/users/32", "status code": 204, "latency": "1.065965ms"}
+2026-06-11T14:57:38.677314	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-11T14:57:38.678792	WARN	server/server.go:78	HTTP server stopped
