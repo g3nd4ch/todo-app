@@ -1,0 +1,16 @@
+2026-06-13T15:39:32.577290	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-13T15:39:32.600274	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-13T15:39:32.600360	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-13T15:39:32.600466	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-13T15:40:12.247936	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "ababf69c-6d2c-44b4-9f8a-480ed5800adf", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T12:40:12.247934"}
+2026-06-13T15:40:12.248097	DEBUG	http/patch_user.go:32	PatchUserRequest fields:
+FullName: '{{<nil> false}}'
+PhoneNumber: '{{<nil> false}}'	{"request_id": "ababf69c-6d2c-44b4-9f8a-480ed5800adf", "http method": "PATCH", "url": "/api/v1/users/11"}
+2026-06-13T15:40:12.248142	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "ababf69c-6d2c-44b4-9f8a-480ed5800adf", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 200, "latency": "207.27µs"}
+2026-06-13T15:40:48.557344	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "65efd6d6-901c-4368-96ca-c3e1526b7094", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T12:40:48.557342"}
+2026-06-13T15:40:48.557519	DEBUG	http/patch_user.go:32	PatchUserRequest fields:
+FullName: '{{<nil> false}}'
+PhoneNumber: '{{<nil> true}}'	{"request_id": "65efd6d6-901c-4368-96ca-c3e1526b7094", "http method": "PATCH", "url": "/api/v1/users/11"}
+2026-06-13T15:40:48.557599	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "65efd6d6-901c-4368-96ca-c3e1526b7094", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 200, "latency": "255.055µs"}
+2026-06-13T19:14:19.257291	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-13T19:14:19.261380	WARN	server/server.go:78	HTTP server stopped

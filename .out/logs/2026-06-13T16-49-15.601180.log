@@ -1,0 +1,10 @@
+2026-06-13T19:49:15.601754	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-13T19:49:15.606914	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-13T19:49:15.607025	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-13T19:49:15.607163	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-13T19:49:17.471559	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "c6008249-0222-4ced-8fc3-17c19b247432", "http method": "PATCH", "url": "/api/v1/users/1", "time": "2026-06-13T16:49:17.471559"}
+2026-06-13T19:49:17.477073	ERROR	response/handler.go:59	failed to patch user	{"request_id": "c6008249-0222-4ced-8fc3-17c19b247432", "http method": "PATCH", "url": "/api/v1/users/1", "error": "patch user: scan error:ERROR: syntax error at or near \"WHERE\" (SQLSTATE 42601)"}
+2026-06-13T19:49:17.477138	ERROR	response/handler.go:76	failed to patch user	{"request_id": "c6008249-0222-4ced-8fc3-17c19b247432", "http method": "PATCH", "url": "/api/v1/users/1", "error": "patch user: scan error:ERROR: syntax error at or near \"WHERE\" (SQLSTATE 42601)"}
+2026-06-13T19:49:17.477208	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "c6008249-0222-4ced-8fc3-17c19b247432", "http method": "PATCH", "url": "/api/v1/users/1", "status code": 500, "latency": "5.649517ms"}
+2026-06-13T19:50:45.606432	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-13T19:50:45.606793	WARN	server/server.go:78	HTTP server stopped

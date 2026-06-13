@@ -1,0 +1,32 @@
+2026-06-13T14:18:11.835327	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-13T14:18:11.850255	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-13T14:18:11.850327	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-13T14:18:11.850433	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-13T14:18:42.888000	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "f4bf7c2f-b93a-4fd2-9cd8-81aebf018085", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:18:42.887999"}
+2026-06-13T14:18:42.888084	WARN	response/handler.go:59	failed to decode and validate HTTP request	{"request_id": "f4bf7c2f-b93a-4fd2-9cd8-81aebf018085", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: EOF: invalid argument"}
+2026-06-13T14:18:42.888107	ERROR	response/handler.go:76	failed to decode and validate HTTP request	{"request_id": "f4bf7c2f-b93a-4fd2-9cd8-81aebf018085", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: EOF: invalid argument"}
+2026-06-13T14:18:42.888142	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "f4bf7c2f-b93a-4fd2-9cd8-81aebf018085", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 400, "latency": "142.51µs"}
+2026-06-13T14:19:37.027603	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "0fde06e8-cd50-48a7-8733-059c27ce2b64", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:19:37.027602"}
+2026-06-13T14:19:37.027990	DEBUG	http/patch_user.go:31	PatchUserRequest fields:
+FullName: ''
+PhoneNumber: ''	{"request_id": "0fde06e8-cd50-48a7-8733-059c27ce2b64", "http method": "PATCH", "url": "/api/v1/users/11"}
+2026-06-13T14:19:37.028184	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "0fde06e8-cd50-48a7-8733-059c27ce2b64", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 200, "latency": "581.595µs"}
+2026-06-13T14:21:23.157952	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "d48cf5bc-f75b-4d9b-88af-f87d6f670b6f", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:21:23.157951"}
+2026-06-13T14:21:23.158103	WARN	response/handler.go:59	failed to decode and validate HTTP request	{"request_id": "d48cf5bc-f75b-4d9b-88af-f87d6f670b6f", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:21:23.158132	ERROR	response/handler.go:76	failed to decode and validate HTTP request	{"request_id": "d48cf5bc-f75b-4d9b-88af-f87d6f670b6f", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:21:23.158197	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "d48cf5bc-f75b-4d9b-88af-f87d6f670b6f", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 400, "latency": "245.531µs"}
+2026-06-13T14:22:05.531679	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "ace5c865-3198-4c0b-b176-0ff9c6c6efc4", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:22:05.531677"}
+2026-06-13T14:22:05.531793	WARN	response/handler.go:59	failed to decode and validate HTTP request	{"request_id": "ace5c865-3198-4c0b-b176-0ff9c6c6efc4", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:22:05.531819	ERROR	response/handler.go:76	failed to decode and validate HTTP request	{"request_id": "ace5c865-3198-4c0b-b176-0ff9c6c6efc4", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:22:05.531886	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "ace5c865-3198-4c0b-b176-0ff9c6c6efc4", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 400, "latency": "208.113µs"}
+2026-06-13T14:22:20.942509	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "6481e220-e2f3-4b56-ac8c-130b4d6c38e3", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:22:20.942508"}
+2026-06-13T14:22:20.942644	WARN	response/handler.go:59	failed to decode and validate HTTP request	{"request_id": "6481e220-e2f3-4b56-ac8c-130b4d6c38e3", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:22:20.942675	ERROR	response/handler.go:76	failed to decode and validate HTTP request	{"request_id": "6481e220-e2f3-4b56-ac8c-130b4d6c38e3", "http method": "PATCH", "url": "/api/v1/users/11", "error": "decode json: invalid character 'p' looking for beginning of object key string: invalid argument"}
+2026-06-13T14:22:20.942733	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "6481e220-e2f3-4b56-ac8c-130b4d6c38e3", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 400, "latency": "224.223µs"}
+2026-06-13T14:24:33.245128	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "806e8618-c94a-46c5-b2ce-1c4c39769f75", "http method": "PATCH", "url": "/api/v1/users/11", "time": "2026-06-13T11:24:33.245127"}
+2026-06-13T14:24:33.245673	DEBUG	http/patch_user.go:31	PatchUserRequest fields:
+FullName: ''
+PhoneNumber: '+71112222121'	{"request_id": "806e8618-c94a-46c5-b2ce-1c4c39769f75", "http method": "PATCH", "url": "/api/v1/users/11"}
+2026-06-13T14:24:33.245746	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "806e8618-c94a-46c5-b2ce-1c4c39769f75", "http method": "PATCH", "url": "/api/v1/users/11", "status code": 200, "latency": "618.375µs"}
+2026-06-13T15:39:26.277644	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-13T15:39:26.281678	WARN	server/server.go:78	HTTP server stopped

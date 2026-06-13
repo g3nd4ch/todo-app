@@ -1,0 +1,18 @@
+2026-06-13T19:16:01.359556	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-13T19:16:01.365850	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-13T19:16:01.365921	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-13T19:16:01.366016	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-13T19:19:08.917501	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "386b7d01-ffa0-4d57-bcfd-463ea42e5a6b", "http method": "POST", "url": "/api/v1/users", "time": "2026-06-13T16:19:08.917501"}
+2026-06-13T19:19:08.922327	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "386b7d01-ffa0-4d57-bcfd-463ea42e5a6b", "http method": "POST", "url": "/api/v1/users", "status code": 201, "latency": "4.824075ms"}
+2026-06-13T19:19:45.929976	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "d107f255-4fda-4691-8b00-bd0972a29598", "http method": "POST", "url": "/api/v1/users", "time": "2026-06-13T16:19:45.929974"}
+2026-06-13T19:19:45.930127	WARN	response/handler.go:59	failed to decode and validate HTTP request	{"request_id": "d107f255-4fda-4691-8b00-bd0972a29598", "http method": "POST", "url": "/api/v1/users", "error": "decode json: invalid character '}' after object key: invalid argument"}
+2026-06-13T19:19:45.930170	ERROR	response/handler.go:76	failed to decode and validate HTTP request	{"request_id": "d107f255-4fda-4691-8b00-bd0972a29598", "http method": "POST", "url": "/api/v1/users", "error": "decode json: invalid character '}' after object key: invalid argument"}
+2026-06-13T19:19:45.930293	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "d107f255-4fda-4691-8b00-bd0972a29598", "http method": "POST", "url": "/api/v1/users", "status code": 400, "latency": "317.842µs"}
+2026-06-13T19:20:20.164947	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "3bb759b8-c05e-477d-9a24-d9adbb4339f0", "http method": "POST", "url": "/api/v1/users", "time": "2026-06-13T16:20:20.164946"}
+2026-06-13T19:20:20.167268	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "3bb759b8-c05e-477d-9a24-d9adbb4339f0", "http method": "POST", "url": "/api/v1/users", "status code": 201, "latency": "2.320029ms"}
+2026-06-13T19:44:47.295836	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "eb68157c-1c8e-482a-8a54-75f4536997bf", "http method": "PATCH", "url": "/api/v1/users/1", "time": "2026-06-13T16:44:47.295835"}
+2026-06-13T19:44:47.298253	WARN	response/handler.go:59	failed to patch user	{"request_id": "eb68157c-1c8e-482a-8a54-75f4536997bf", "http method": "PATCH", "url": "/api/v1/users/1", "error": "apply user patch: validate user patch: 'FullName' cant be patched to null: invalid argument"}
+2026-06-13T19:44:47.298316	ERROR	response/handler.go:76	failed to patch user	{"request_id": "eb68157c-1c8e-482a-8a54-75f4536997bf", "http method": "PATCH", "url": "/api/v1/users/1", "error": "apply user patch: validate user patch: 'FullName' cant be patched to null: invalid argument"}
+2026-06-13T19:44:47.298428	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "eb68157c-1c8e-482a-8a54-75f4536997bf", "http method": "PATCH", "url": "/api/v1/users/1", "status code": 400, "latency": "2.592562ms"}
+2026-06-13T19:48:58.743468	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-13T19:48:58.743869	WARN	server/server.go:78	HTTP server stopped

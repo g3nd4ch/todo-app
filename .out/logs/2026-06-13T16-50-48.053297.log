@@ -1,0 +1,10 @@
+2026-06-13T19:50:48.053623	DEBUG	todoapp/main.go:29	initializing postgres connection pool
+2026-06-13T19:50:48.059792	DEBUG	todoapp/main.go:39	initializing feature	{"feature": "users"}
+2026-06-13T19:50:48.059916	DEBUG	todoapp/main.go:44	initializing HTTP server
+2026-06-13T19:50:48.060023	WARN	server/server.go:56	start HTTP server	{"addr": ":5050"}
+2026-06-13T19:50:50.829819	DEBUG	middleware/common.go:74	>>> incoming HTTP Request	{"request_id": "9494e321-f233-4319-847f-0b2b872f435b", "http method": "PATCH", "url": "/api/v1/users/1", "time": "2026-06-13T16:50:50.829818"}
+2026-06-13T19:50:50.832252	ERROR	response/handler.go:59	failed to patch user	{"request_id": "9494e321-f233-4319-847f-0b2b872f435b", "http method": "PATCH", "url": "/api/v1/users/1", "error": "patch user: scan error:ERROR: syntax error at or near \",\" (SQLSTATE 42601)"}
+2026-06-13T19:50:50.832330	ERROR	response/handler.go:76	failed to patch user	{"request_id": "9494e321-f233-4319-847f-0b2b872f435b", "http method": "PATCH", "url": "/api/v1/users/1", "error": "patch user: scan error:ERROR: syntax error at or near \",\" (SQLSTATE 42601)"}
+2026-06-13T19:50:50.832397	DEBUG	middleware/common.go:80	<<< done HTTP Request	{"request_id": "9494e321-f233-4319-847f-0b2b872f435b", "http method": "PATCH", "url": "/api/v1/users/1", "status code": 500, "latency": "2.578127ms"}
+2026-06-13T19:51:47.146710	WARN	server/server.go:69	shutdown HTTP server...
+2026-06-13T19:51:47.146908	WARN	server/server.go:78	HTTP server stopped
